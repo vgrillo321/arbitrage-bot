@@ -1,47 +1,21 @@
 {
-  "contractName": "Erc20",
+  "contractName": "Comptroller",
   "abi": [
-    {
-      "constant": true,
-      "inputs": [
-        {
-          "internalType": "address",
-          "name": "account",
-          "type": "address"
-        }
-      ],
-      "name": "balanceOf",
-      "outputs": [
-        {
-          "internalType": "uint256",
-          "name": "",
-          "type": "uint256"
-        }
-      ],
-      "payable": false,
-      "stateMutability": "view",
-      "type": "function"
-    },
     {
       "constant": false,
       "inputs": [
         {
-          "internalType": "address",
+          "internalType": "address[]",
           "name": "",
-          "type": "address"
-        },
-        {
-          "internalType": "uint256",
-          "name": "",
-          "type": "uint256"
+          "type": "address[]"
         }
       ],
-      "name": "approve",
+      "name": "enterMarkets",
       "outputs": [
         {
-          "internalType": "bool",
+          "internalType": "uint256[]",
           "name": "",
-          "type": "bool"
+          "type": "uint256[]"
         }
       ],
       "payable": false,
@@ -53,29 +27,18 @@
       "inputs": [
         {
           "internalType": "address",
-          "name": "",
+          "name": "holder",
           "type": "address"
-        },
-        {
-          "internalType": "uint256",
-          "name": "",
-          "type": "uint256"
         }
       ],
-      "name": "transfer",
-      "outputs": [
-        {
-          "internalType": "bool",
-          "name": "",
-          "type": "bool"
-        }
-      ],
+      "name": "claimComp",
+      "outputs": [],
       "payable": false,
       "stateMutability": "nonpayable",
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"approve\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"balanceOf\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"transfer\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/src/contracts/examples/LeveragedYieldFarm.sol\":\"Erc20\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/src/contracts/examples/LeveragedYieldFarm.sol\":{\"keccak256\":\"0xb630ea030496fd18df8488c94f05ad238eb2bd0e3104cb06060afb2506eb6ec8\",\"urls\":[\"bzz-raw://70f1e8d4d45492ffe8a4e61a8945af7173c41a0636a314d8e9f1e389e30709cd\",\"dweb:/ipfs/QmWJjtnqm5u2nYNaoiDK5o6p6ZDguypVU7vb7KpyaSHtup\"]}},\"version\":1}",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"holder\",\"type\":\"address\"}],\"name\":\"claimComp\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address[]\",\"name\":\"\",\"type\":\"address[]\"}],\"name\":\"enterMarkets\",\"outputs\":[{\"internalType\":\"uint256[]\",\"name\":\"\",\"type\":\"uint256[]\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/src/contracts/examples/LeveragedYieldFarm.sol\":\"Comptroller\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/src/contracts/examples/LeveragedYieldFarm.sol\":{\"keccak256\":\"0xb630ea030496fd18df8488c94f05ad238eb2bd0e3104cb06060afb2506eb6ec8\",\"urls\":[\"bzz-raw://70f1e8d4d45492ffe8a4e61a8945af7173c41a0636a314d8e9f1e389e30709cd\",\"dweb:/ipfs/QmWJjtnqm5u2nYNaoiDK5o6p6ZDguypVU7vb7KpyaSHtup\"]}},\"version\":1}",
   "bytecode": "0x",
   "deployedBytecode": "0x",
   "sourceMap": "",
@@ -23484,7 +23447,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.6",
-  "updatedAt": "2022-03-14T19:02:04.313Z",
+  "updatedAt": "2022-03-14T19:02:04.249Z",
   "devdoc": {
     "methods": {}
   },

@@ -6,7 +6,7 @@ interface Structs {
     struct Val {
         uint256 value;
     }
-
+  
     enum ActionType {
       Deposit,   // supply tokens
       Withdraw,  // borrow tokens
